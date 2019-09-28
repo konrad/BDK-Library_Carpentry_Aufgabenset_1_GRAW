@@ -8,7 +8,9 @@ Für den Test der verschiedenen Text-Editoren habe ich zusätzlich zu Spyder die
 
 ## 2. Eine Python-Bibliothek
 
-### https://pypi.org/project/isbnlib/
+### https://pypi.org/project/numpy/
+
+Bei der Recherche nach einer interessanten Python-Bibliothek habe ich mir zunächst überlegt, welche Aufgaben ich in meinem Alltag mit Hilfe einer Python-Anwendung lösen könnte. Interessant wäre für mich z.B. eine Möglichkeit, Trainingsdaten aus dem Laufsport auswerten und grafisch darstellen zu können. Insbesondere eine Analyse der einzelnen Trainings- bzw. Intensitätsbereiche in Bezug auf physiologische Parameter wie z.B. Herzfrequenz-, Laktat-, oder Sauerstoffaufnahme-Werte wäre ein interessanter Anwendungsbereich. Die Erweiterung NumPy scheint die Möglichkeiten zu bieten, zuvor exportierte Trainingsdaten bzw. Auswertugen von Leistungsdiagnostiken miteinander in Bezug zu setzen, zu analysieren und auch grafisch darzustellen. Dabei ermöglich NumPy als Bibliothek sowohl die numerische Berechnungen als auch die mehrdimensionale Darstellung. Ein erster Versuch eine eigene Anwendung zu erstellen ist leider gescheitert - die Idee wird aber weiter verfolgt. 
 
 ## 3. Eine Fehlermeldung und Ihre Lösung
 
