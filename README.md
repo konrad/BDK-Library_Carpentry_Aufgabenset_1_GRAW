@@ -8,21 +8,11 @@ Für den Test der verschiedenen Text-Editoren habe ich zusätzlich zu Spyder die
 
 ## 2. Eine Python-Bibliothek
 
-### https://pypi.org/project/numpy/
+### [Link](https://pypi.org/project/numpy/)
 
 Bei der Recherche nach einer interessanten Python-Bibliothek habe ich mir zunächst überlegt, welche Aufgaben ich in meinem Alltag mit Hilfe einer Python-Anwendung lösen könnte. Interessant wäre für mich z.B. eine Möglichkeit, Trainingsdaten aus dem Laufsport auswerten und grafisch darstellen zu können. Insbesondere eine Analyse der einzelnen Trainings- bzw. Intensitätsbereiche in Bezug auf physiologische Parameter wie z.B. Herzfrequenz-, Laktat-, oder Sauerstoffaufnahme-Werte wäre ein interessanter Anwendungsbereich. Die Erweiterung NumPy scheint die Möglichkeiten zu bieten, zuvor exportierte Trainingsdaten bzw. Auswertugen von Leistungsdiagnostiken miteinander in Bezug zu setzen, zu analysieren und auch grafisch darzustellen. Dabei ermöglich NumPy als Bibliothek sowohl die numerische Berechnungen als auch die mehrdimensionale Darstellung. Ein erster Versuch eine eigene Anwendung zu erstellen ist leider gescheitert - die Idee wird aber weiter verfolgt. 
 
 ## 3. Eine Fehlermeldung und Ihre Lösung
-
-```"for ID in IDs:\n",
-    "    full_url = base_url + ID\n",
-    "    ID_json_data = urllib.request.urlopen(full_url).read()\n",
-    "    ID_data = json.loads(ID_json_data)\n",
-    "    print(ID)\n",
-    "    print(ID_data[\"result\"][ID][\"pubdate\"])\n",
-    "    print(ID_data[\"result\"][ID][\"title\"])\n",
-    "    print()"```
- 
 
 Die größte Hürde bei der Lösung der Aufgabe war die Tatsache, dass die Daten, welche sich hinter der PubMed-ID verbergen, eine andere Struktur aufweisen, als die Daten, welche wir vorab über eine DOI aus CrossRef bezogen haben. Während der Befehl „doi_data.keys()“ bzw. darauffolgend „doi_data["message"].keys() im vorangegangenen Beispiel alle verfügbaren Metadaten ausgeworfen hat, waren in der vorliegenden Aufgabe lediglich zwei Auswahlmöglichkeiten gegeben, wobei sich die Metadaten hinter der ausgeschriebenen PubMed-ID verborgen haben. Diese Struktur, also die Notwendigkeit, eine Ebene tiefer zu gehen, sorgte letztendlich bei der Abfrage der Daten für diverse Fehlermeldungen, welche sich alle darauf bezogen, dass die vier gefragten IDs an die Stelle der zuvor explizit ausgewählten ID treten sollten. Die ID im Dateipfad musste also durch eine Variable ersetzt werden, welche die korrekte Ausführung der Schleife ermöglicht. Alle Fehlermeldungen deuteten explizit auf diese Stelle des Befehls, da mir die richtige Lösung erst nach mehrmaligen Probieren verschiedener Schreibweisen deutlich wurde. Fehlerquellen waren hier z.B. IDs statt ID oder „ID“ statt ID. Die richtige Lösung sah schließlich folgendenmaßen aus: print(ID_data["result"][ID]["pubdate"]). 
 
